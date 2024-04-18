@@ -13,13 +13,7 @@
 
   <h2>Messenger Demo</h2>
 
-  <div class="fb-send-to-messenger" 
-    messenger_app_id="673010590121110" 
-    page_id="PAGE_ID" 
-    data-ref="<PASS_THROUGH_PARAM>" 
-    color="<blue | white>" 
-    size="<standard | large | xlarge>">
-  </div>
+  <div id="shareButton"></div>
   
   <hr>
 
@@ -36,8 +30,17 @@
         version          : 'v19.0'
       });
     };
+
+    document.getElementById('shareButton').onclick = function() {
+      FB.ui({
+        method: 'send',
+        link: 'https://ericwu.asia/',
+      });
+    }
   </script>
   <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+
+  
   
   <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
   <script>
