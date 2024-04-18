@@ -14,11 +14,11 @@
   <h2>Messenger Demo</h2>
 
   <div class="fb-send-to-messenger" 
-     messenger_app_id="APP_ID"
-     page_id="PAGE_ID"
-     data-ref="https%3A%2F%2Fwww.youtube.com" 
-     color="blue" 
-     size="large">
+    messenger_app_id="<APP_ID>" 
+    page_id="PAGE_ID" 
+    data-ref="<PASS_THROUGH_PARAM>" 
+    color="<blue | white>" 
+    size="<standard | large | xlarge>">
   </div>
   
   <hr>
@@ -28,14 +28,12 @@
   <button id="btnLogin" onclick="liff.login()">Log In</button>
   <button id="btnLogOut" onclick="logOut()">Log Out</button>
 
-  <div id="fb-root"></div>
   <script>
     window.fbAsyncInit = function() {
       FB.init({
         appId            : '673010590121110',
-        autoLogAppEvents : true,
         xfbml            : true,
-        version          : 'v10.0'
+        version          : 'v19.0'
       });
     };
   </script>
