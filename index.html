@@ -3,16 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
-  <title>My LIFF App</title>
+  <title>Share Demo</title>
   <style>
     body { padding: 256px }
     button { display: none; width: 50%; padding: 16px 0; margin: 16px auto }
   </style>
 </head>
 <body>
+
+  <h2>Messenger Demo</h2>
+  <a href="fb-messenger://share/?link= https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fsharing%2Freference%2Fsend-dialog&app_id=123456789">Send In Messenger</a>
+
+  <hr>
+
+  <h2>LINE Demo</h2>
   <button id="btnShare" onclick="sendShare()">Share Target Picker</button>
   <button id="btnLogin" onclick="liff.login()">Log In</button>
   <button id="btnLogOut" onclick="logOut()">Log Out</button>
+
+  
   <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
   <script>
     async function sendShare() {
