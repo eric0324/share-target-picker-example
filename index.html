@@ -12,9 +12,14 @@
 <body>
 
   <h2>Messenger Demo</h2>
-  <a href="fb-messenger://share/?link=https%3A%2F%2Fwww.youtube.com&app_id=673010590121110">
-    Send In Messenger
-  </a>
+
+  <div class="fb-send-to-messenger" 
+     messenger_app_id="APP_ID"
+     page_id="PAGE_ID"
+     data-ref="https%3A%2F%2Fwww.youtube.com" 
+     color="blue" 
+     size="large">
+  </div>
   
   <hr>
 
@@ -23,6 +28,18 @@
   <button id="btnLogin" onclick="liff.login()">Log In</button>
   <button id="btnLogOut" onclick="logOut()">Log Out</button>
 
+  <div id="fb-root"></div>
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId            : '673010590121110',
+        autoLogAppEvents : true,
+        xfbml            : true,
+        version          : 'v10.0'
+      });
+    };
+  </script>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
   
   <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
   <script>
